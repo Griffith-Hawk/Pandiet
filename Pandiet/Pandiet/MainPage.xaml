@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.MainPage"
+             BackgroundColor="White">
+
+    <StackLayout Spacing="0">
+        <Grid HeightRequest="200" BackgroundColor="White">
+            <Frame BackgroundColor="#FF9640"
+                   CornerRadius="15"
+                   VerticalOptions="End"
+                   TranslationX="125">
+                <Label Text="PANDIET"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="48"
+                       Margin="-10"/>
+            </Frame>
+        </Grid>
+        <Grid HeightRequest="600">
+            <Image Source="MainPage_Background.png"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start"/>
+            <Button x:Name="Auth_Button"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Text="АВТОРИЗАЦИЯ"
+                    TextColor="White"
+                    BackgroundColor="#FF9640"
+                    CornerRadius="15"
+                    Margin="50"
+                    WidthRequest="175"
+                    HeightRequest="50"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Clicked="Auth_Button_Clicked"/>
+            <Button x:Name="Reg_Button"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Text="Регистрация"
+                    TextColor="Gray"
+                    BackgroundColor="Transparent"
+                    CornerRadius="15"
+                    WidthRequest="175"
+                    FontSize="12"
+                    Margin="5"
+                    Clicked="Reg_Button_Clicked"/>
+        </Grid>
+        <Grid HeightRequest="250">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label HorizontalOptions="Center"
+                   Text="Данное ПО (программное обеспечение) распространяется абсолютно бесплатно на территории Россйской Федерации и запрещается любые виды продажи данного ПО на территории любого государства. Создателем и владельцем данного приложения является компания SHALAUMOVA inc.В данном ПО предусмотрены платные услуги в виде подписки на различные периоды времени для расширения функционала, платная подписка не является обязательной и является исключительно опциональной функцией, которая не мешает пользователю пользоваться приложением абсолютно бесплатно. Загружая приложение, вы принимаете пользовательское соглашение и в случае его несоблюдения несёте полную ответственность."
+                   HorizontalTextAlignment="Center"
+                   FontSize="10"
+                   LineBreakMode="WordWrap"
+                   WidthRequest="340"
+                   TextColor="DarkGray"/>
+            <Label Grid.Row="1"
+                   Text="SHALAUMOVA© inc. 2022 ALL RIGHTS RESERVED"
+                   HorizontalOptions="Center"
+                   FontSize="10"
+                   VerticalOptions="End"
+                   TextType="Text"
+                   Margin="5"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

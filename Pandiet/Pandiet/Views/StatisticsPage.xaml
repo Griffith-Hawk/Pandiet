@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="Pandiet.Views.StatisticsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid HeightRequest="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="АНАЛИТИКА"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       TextColor="#FF7400"
+                       VerticalOptions="End"
+                       TranslationY="15"/>
+                    <Frame BackgroundColor="#FFB273"
+                       Margin="10"
+                       VerticalOptions="End"
+                       HeightRequest="150"
+                       CornerRadius="15"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Text="ЗА МЕСЯЦ"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   TranslationY="-10"/>
+                                <Label Text="Белки:"
+                                   TextColor="White"
+                                   Grid.Row="1"
+                                   FontSize="12"/>
+                                <Label Text="32%"
+                                   TextColor="White"
+                                   Grid.Row="1"
+                                   FontSize="12"
+                                   TranslationX="40"/>
+                                <Label Text="Жиры:"
+                                   TextColor="White"
+                                   Grid.Row="2"
+                                   FontSize="12"/>
+                                <Label Text="32%"
+                                   TextColor="White"
+                                   Grid.Row="2"
+                                   FontSize="12"
+                                   TranslationX="40"/>
+                                <Label Text="Углеводы:"
+                                   TextColor="White"
+                                   Grid.Row="3"
+                                   FontSize="12"/>
+                                <Label Text="32%"
+                                   TextColor="White"
+                                   Grid.Row="3"
+                                   FontSize="12"
+                                   TranslationX="60"/>
+                                <Label Text="Состав:"
+                                   TextColor="White"
+                                   Grid.Row="4"
+                                   FontSize="12"/>
+                                <Label Text="Рыба, мясо, зерновые, молоко и т.д."
+                                   TextColor="White"
+                                   Grid.Row="4"
+                                   LineBreakMode="WordWrap"
+                                   FontSize="12"
+                                   TranslationX="46"/>
+                            </Grid>
+                            <microcharts:ChartView x:Name="chartViewPie"
+                                               Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+                <Grid HeightRequest="250">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="75"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="#FFB273"
+                       Margin="10"
+                       Grid.RowSpan="2"
+                       CornerRadius="15">
+                        <Grid>
+                            <Label Text="СЕГОДНЯ"
+                                   TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   TranslationY="-10"/>
+                            <microcharts:ChartView x:Name="chartViewPie2"
+                                                   Scale="0.8"
+                                                   TranslationY="-20"/>
+                            <Label Text="Белки: 32%
+                                         Жиры: 32%
+                                         Углеводы: 32%
+                                         Калории: 2145 Ккал
+                                         Норма: 1850 Ккал"
+                                   TextColor="White"
+                                   TranslationY="10"
+                                   FontSize="12"
+                                   VerticalOptions="End"
+                                   LineBreakMode="WordWrap"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="#FFB273"
+                       Margin="10"
+                       Grid.Column="1"
+                       CornerRadius="15">
+                        <Grid>
+                            <Label Text="Глобальная цель"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   TranslationY="-5"/>
+                            <Image Source="StrengthIcon.png"
+                                   Scale="0.25"
+                                   TranslationX="-50"
+                                   TranslationY="15"/>
+                            <Label Text="Набор массы"
+                                   TextColor="White"
+                                   VerticalOptions="End"
+                                   TranslationY="-30"
+                                   TranslationX="25"/>
+                            <ProgressBar VerticalOptions="End"
+                                         ScaleY="5"
+                                         ProgressColor="#3BA3D0"
+                                         Progress="0.3"/>
+                            <Label Text="32%"
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="White"
+                                   VerticalOptions="End"
+                                   TranslationX="5"/>
+                        </Grid>
+                    </Frame>
+                    <Button BackgroundColor="#FF9640"
+                        Margin="10"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        CornerRadius="15"
+                        Text="Сменить цель"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        TextColor="White">
+
+                    </Button>
+                </Grid>
+
+                <Grid HeightRequest="350">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="ГРАФИК ЗА ДВЕ НЕДЕЛИ"
+                           VerticalOptions="End"
+                           HorizontalOptions="End"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Margin="10"
+                           TextColor="#FF7400"/>
+                    <microcharts:ChartView x:Name="chartViewBar"
+                                           Margin="10"
+                                           Grid.Row="1"/>
+                    <Picker x:Name="Statistics_Picker"
+                            Grid.Row="2"
+                            SelectedIndexChanged="Statistics_Picker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Белки</x:String>
+                            <x:String>Жиры</x:String>
+                            <x:String>Углеводы</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+
+                <Grid HeightRequest="150">
+                    <Frame Margin="10"
+                           BackgroundColor="#35D3A7"
+                           CornerRadius="15">
+                        <Grid>
+                            <Label Text="РЕКОМЕНДАЦИЯ!"
+                                   TextColor="White"
+                                   FontAttributes="Bold"
+                                   FontSize="24"
+                                   TranslationY="-10"/>
+                            <Label Text="Pandiet рекомендует увеличить потребление углеводов. Так же за час до физических нагрузок рекомендуется употреблять продукты, содержащие много белка, после физических нагрузок в течении часа-полтора можно лишь еду, содержащую белок, после чего вновь вернуться к продуктам с большим содержанием углеводов. Вечером и утром желательно после приёма еду съесть твор... "
+                                   LineBreakMode="WordWrap"
+                                   FontSize="8"
+                                   TextColor="White"
+                                   TranslationY="20"/>
+                            <Button HorizontalOptions="End"
+                                    VerticalOptions="End"
+                                    BackgroundColor="Transparent"
+                                    Text="Подробнее..."
+                                    TextColor="White"
+                                    TranslationY="25"
+                                    FontSize="14"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+
+                <Grid HeightRequest="150">
+                    <Frame>
+                        <Grid>
+                            <Image Source="food1"
+                                   Scale="1.36"
+                                   Aspect="AspectFill"/>
+                            <Grid BackgroundColor="Black"
+                                  Opacity="0.5"
+                                  Scale="1.36"
+                                  >
+
+                            </Grid>
+                            <Image Source="LockIcon.png"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

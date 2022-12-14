@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.LoginPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Grid HeightRequest="200">
+                <Frame BackgroundColor="#FF9640"
+                       CornerRadius="15"
+                       VerticalOptions="End"
+                       TranslationX="-70"
+                       TranslationY="-30">
+                    <Label Text="АВТОРИЗАЦИЯ"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       Margin="-10"
+                       HorizontalOptions="End"/>
+                </Frame>
+            </Grid>
+            <Grid HeightRequest="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="Login_Label"
+                       Grid.Row="0"
+                       FontSize="14"
+                       Text="Login"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="25"
+                       TranslationY="-15"/>
+                <Entry x:Name="Login_Entry"
+                       Grid.Row="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"
+                       MaxLength="40"/>
+                <Label x:Name="Password_Label" 
+                       Grid.Row="1"
+                       FontSize="14"
+                       Text="Password"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="25"
+                       TranslationY="-15"/>
+                <Entry x:Name="Password_Entry"
+                       Grid.Row="1"
+                       IsPassword="True"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"
+                       MaxLength="16"/>
+                <Button x:Name="RecreatePassword_Button"
+                        Text="Забыли пароль?"
+                        TextColor="#00A779"
+                        BackgroundColor="Transparent"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        Grid.Row="3"
+                        Clicked="RecreatePassword_Button_Clicked"/>
+                <Button x:Name="LogIn_Button"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        Text="ВОЙТИ"
+                        TextColor="White"
+                        BackgroundColor="#FF9640"
+                        CornerRadius="15"
+                        Grid.Row="2"
+                        WidthRequest="175"
+                        HeightRequest="50"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        Clicked="LogIn_Button_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

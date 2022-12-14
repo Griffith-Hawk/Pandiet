@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.ProfilePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="600"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Frame CornerRadius="50"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           Margin="5"
+                           WidthRequest="64"
+                           HeightRequest="64">
+                        <Image Source="food1.jpg"
+                               Aspect="AspectFill"
+                               Scale="2"/>
+                    </Frame>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Username"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           TextColor="#FF7400"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           Grid.Row="1"/>
+                    <Label Text="Account_Status"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           TextColor="#FF7400"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           Grid.Row="2"
+                           TranslationY="-10"/>
+                    <Label Text="Get Premium"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           TextColor="#3BA3D0"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           Grid.Row="3"
+                           TranslationY="-15"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame BackgroundColor="#FFB273"
+                       Margin="10"
+                       CornerRadius="25">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Пароль:"
+                               TextColor="White"
+                               FontSize="16"
+                               Grid.Row="0"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                        <Button Text="Сменить пароль"
+                                TextColor="White"
+                                FontSize="11"
+                                Grid.Row="0"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                BackgroundColor="Transparent"
+                                TranslationY="20"
+                                TranslationX="-10"/>
+                        <Label Grid.Row="0"
+                               TextColor="White"
+                               FontSize="14"
+                               Text="************"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"
+                               TranslationX="60"/>
+                        <Button Text="ПОКАЗАТЬ"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                FontAttributes="Bold"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                FontSize="12"/>
+                        <Label Text="Дата рождения:"
+                               TextColor="White"
+                               FontSize="14"
+                               Grid.Row="1"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Row="1"
+                               TextColor="White"
+                               FontSize="14"
+                               Text="DD.MM.YY"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"
+                               TranslationX="120"/>
+                        <Button Text="Сменить дату рождения"
+                                TextColor="White"
+                                FontSize="11"
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                BackgroundColor="Transparent"
+                                TranslationY="20"
+                                TranslationX="-10"/>
+                        <Label Text="Пол:"
+                               TextColor="White"
+                               FontSize="14"
+                               Grid.Row="2"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Row="2"
+                               TextColor="White"
+                               FontSize="14"
+                               Text="Man/Woman"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"
+                               TranslationX="35"/>
+                        <Button Text="Сменить пол"
+                                TextColor="White"
+                                FontSize="11"
+                                Grid.Row="2"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                BackgroundColor="Transparent"
+                                TranslationY="20"
+                                TranslationX="-10"/>
+                        <Label Text="Версия приложения:"
+                               TextColor="White"
+                               FontSize="14"
+                               Grid.Row="3"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Row="3"
+                               TextColor="White"
+                               FontSize="14"
+                               Text="0.00.01"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"
+                               TranslationX="155"/>
+                        <Button Text="Проверить наличие обновлений"
+                                TextColor="White"
+                                FontSize="11"
+                                Grid.Row="3"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                BackgroundColor="Transparent"
+                                TranslationY="20"
+                                TranslationX="-10"/>
+                        <Frame Grid.Row="4"
+                               HorizontalOptions="End"
+                               VerticalOptions="End"
+                               HeightRequest="100"
+                               WidthRequest="225"
+                               CornerRadius="25">
+                            <Grid>
+                                <Label Text="СКИДКА 75% НА ПРЕМИУМ АККАУНТ!"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="18"
+                                       TranslationY="-5"/>
+                                <Label Text="Скидка 75% на второй год премиум аккаунта в приложении Pandiet при оформлении годовой подписки."
+                                       TextColor="#FFB273"
+                                       FontSize="8"
+                                       VerticalOptions="Center"
+                                       LineBreakMode="WordWrap"/>
+                                <Button BackgroundColor="Transparent"
+                                        Text="Подробнее..."
+                                        TextColor="#FF7400"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="End"
+                                        FontSize="12"
+                                        TranslationY="20"
+                                        TranslationX="10"/>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.AddMealPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="КАРТОЧКА ПРИЕМА ПИЩИ"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#FF7400"
+                   HorizontalOptions="End"
+                   VerticalOptions="End"
+                   TranslationX="-20"
+                   TranslationY="10"/>
+            <Frame BackgroundColor="#FFB273"
+                   Margin="10"
+                   HeightRequest="500"
+                   VerticalOptions="Start"
+                   CornerRadius="15"
+                   Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="CalendarIcon.png"/>
+                    <Label Text="Дата приёма пищи"
+                           Grid.Column="1"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TranslationX="-10"/>
+                    <DatePicker Grid.Row="1"
+                                Grid.ColumnSpan="2"/>
+                    <Image Source="ScaleIcon.png"
+                           Grid.Row="2"/>
+                    <Label Text="Последнее взвешивание"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TranslationX="-10"/>
+                    <Entry Grid.Row="3"
+                           Grid.ColumnSpan="2"/>
+                    <Image Source="FoodIcon.png"
+                           Grid.Row="4"/>
+                    <Label Text="Порция"
+                           Grid.Column="1"
+                           Grid.Row="4"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TranslationX="-10"/>
+                    <Picker Grid.Row="5"
+                            Grid.ColumnSpan="2"/>
+                    <Button x:Name="AddPortion_Button"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="2"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Text="Добавить порцию"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            TranslationY="-15"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            Clicked="AddPortion_Button_Clicked"/>
+                    <Button HorizontalOptions="End"
+                            VerticalOptions="End"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="White"
+                            CornerRadius="15"
+                            Text="Принять"
+                            HeightRequest="55"
+                            WidthRequest="155"
+                            TextColor="#FF7400"
+                            FontAttributes="Bold"
+                            FontSize="16"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

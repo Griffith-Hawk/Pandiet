@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.AddPortionPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="КАРТОЧКА СОСТАВА ПОРЦИИ"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#FF7400"
+                   HorizontalOptions="End"
+                   VerticalOptions="End"
+                   TranslationX="-20"
+                   TranslationY="10"/>
+            <Frame BackgroundColor="#FFB273"
+                   Margin="10"
+                   HeightRequest="500"
+                   VerticalOptions="Start"
+                   CornerRadius="15"
+                   Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="FoodIcon.png"/>
+                    <Label Text="Название порции"
+                           Grid.Column="1"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TranslationX="-10"/>
+                    <Entry Grid.Row="1"
+                                Grid.ColumnSpan="2"/>
+                    <Image Source="Food2Icon.png"
+                           Grid.Row="2"/>
+                    <Label Text="Состав порции"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           FontAttributes="Bold"
+                           FontSize="16"
+                           TranslationX="-10"/>
+                    <Frame Grid.Row="3"
+                           Grid.ColumnSpan="2"
+                           CornerRadius="10">
+                        <ContentView x:Name="AddInPortion_ContentView">
+
+                        </ContentView>
+                    </Frame>
+                    <ImageButton Source="AddIcon.png"
+                                 Grid.Row="4"
+                                 BackgroundColor="Transparent"/>
+                    <Button HorizontalOptions="End"
+                            VerticalOptions="End"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="#FF7400"
+                            CornerRadius="15"
+                            Text="Удалить"
+                            HeightRequest="55"
+                            WidthRequest="155"
+                            TranslationY="-65"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="16"/>
+                    <Button HorizontalOptions="End"
+                            VerticalOptions="End"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="White"
+                            CornerRadius="15"
+                            Text="Принять"
+                            HeightRequest="55"
+                            WidthRequest="155"
+                            TextColor="#FF7400"
+                            FontAttributes="Bold"
+                            FontSize="16"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

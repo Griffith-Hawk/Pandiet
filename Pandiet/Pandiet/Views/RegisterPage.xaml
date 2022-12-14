@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pandiet.Views.RegisterPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Grid HeightRequest="200">
+                <Frame BackgroundColor="#FF9640"
+                       CornerRadius="15"
+                       VerticalOptions="End"
+                       TranslationX="-80"
+                       TranslationY="-30">
+                    <Label Text="РЕГИСТРАЦИЯ"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       Margin="-10"
+                       HorizontalOptions="End"/>
+                </Frame>
+            </Grid>
+            <Grid HeightRequest="600">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label x:Name="Login_Label"
+                       Grid.Row="0"
+                       FontSize="14"
+                       Text="Логин"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="15"
+                       TranslationY="-15"/>
+                <Entry x:Name="Login_Entry"
+                       Grid.Row="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"
+                       MaxLength="40"/>
+                <Label x:Name="Password_Label" 
+                       Grid.Row="1"
+                       FontSize="14"
+                       Text="Пароль"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="15"
+                       TranslationY="-15"/>
+                <Entry x:Name="Password_Entry"
+                       Grid.Row="1"
+                       IsPassword="True"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"
+                       MaxLength="16"/>
+                <Label x:Name="DateBirthday_Label"
+                       Grid.Row="2"
+                       FontSize="14"
+                       Text="Дата рождения"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="15"
+                       TranslationY="-15"/>
+                <DatePicker x:Name="DateBirthday_Entry"
+                       Grid.Row="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"/>
+                <Label x:Name="Gender_Label"
+                       Grid.Row="3"
+                       FontSize="14"
+                       Text="Пол"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="15"
+                       TranslationY="-15"/>
+                <Picker x:Name="Gender_Picker"
+                       Grid.Row="3"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300">
+                    <Picker.Items>
+                        <x:String>Мужской</x:String>
+                        <x:String>Женский</x:String>
+                        <x:String>Гигачад</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="Weight_Label" 
+                       Grid.Row="4"
+                       FontSize="14"
+                       Text="Вес"
+                       VerticalOptions="Start"
+                       Margin="25"
+                       TranslationX="15"
+                       TranslationY="-15"/>
+                <Entry x:Name="Weight_Entry"
+                       Grid.Row="4"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       WidthRequest="300"
+                       MaxLength="16"/>
+                <Button x:Name="Registration_Button"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        Text="ЗАРЕГИСТРИРОВАТЬСЯ"
+                        TextColor="White"
+                        BackgroundColor="#FF9640"
+                        CornerRadius="10"
+                        Grid.Row="5"
+                        WidthRequest="225"
+                        HeightRequest="50"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        Clicked="Registration_Button_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
